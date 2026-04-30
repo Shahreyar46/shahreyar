@@ -6,12 +6,21 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Github, Linkedin, MessageCircle } from 'lucide-react';
+import { Mail, MapPin, Github, Linkedin, MessageCircle, Copy, Check } from 'lucide-react';
 import { toast } from 'sonner';
 
 export default function Contact() {
   const [submitting, setSubmitting] = useState(false);
   const [sent, setSent] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText(developer.email).then(() => {
+      setCopied(true);
+      toast.success('Email copied to clipboard!');
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -64,13 +73,29 @@ export default function Contact() {
             </div>
 
             <div className="space-y-3">
-              <a href={`mailto:${developer.email}`} className="flex items-center gap-4 rounded-xl border border-border p-4 hover:bg-surface transition-colors">
-                <span className="h-10 w-10 rounded-lg bg-foreground text-background flex items-center justify-center"><Mail className="h-4 w-4" /></span>
-                <div>
-                  <p className="font-mono text-xs text-muted-foreground">email</p>
-                  <p className="font-medium text-sm">{developer.email}</p>
-                </div>
-              </a>
+              <div className="flex items-center gap-2 rounded-xl border border-border p-4 hover:bg-surface hover:border-accent/40 transition-colors group">
+                <a
+                  href={`mailto:${developer.email}`}
+                  title="Click to open mail compose"
+                  className="flex items-center gap-4 flex-1 cursor-pointer min-w-0"
+                >
+                  <span className="h-10 w-10 shrink-0 rounded-lg bg-foreground text-background flex items-center justify-center">
+                    <Mail className="h-4 w-4" />
+                  </span>
+                  <div className="min-w-0">
+                    <p className="font-mono text-xs text-muted-foreground">email</p>
+                    <p className="font-medium text-sm group-hover:text-accent transition-colors truncate">{developer.email}</p>
+                  </div>
+                </a>
+                <button
+                  onClick={copyEmail}
+                  title="Copy email address"
+                  className="shrink-0 h-8 w-8 flex items-center justify-center rounded-lg border border-border text-muted-foreground hover:text-accent hover:border-accent/40 cursor-pointer transition-colors"
+                  aria-label="Copy email"
+                >
+                  {copied ? <Check className="h-3.5 w-3.5 text-green-400" /> : <Copy className="h-3.5 w-3.5" />}
+                </button>
+              </div>
               <a
                 href={`https://wa.me/${developer.phone.replace(/\D/g, '')}?text=${encodeURIComponent("Hi Shahreyar, I'd like to discuss a project with you.")}`}
                 target="_blank"
@@ -129,12 +154,24 @@ export default function Contact() {
                 <Label htmlFor="message" className="font-mono text-xs">Message</Label>
                 <Textarea id="message" name="message" rows={6} required placeholder="Tell me a little about your project, timeline and goals." />
               </div>
-              <Button type="submit" size="lg" className="w-full font-mono" disabled={submitting || sent}>
-                <MessageCircle className="mr-2 h-4 w-4 text-[#25D366]" />
+              <Button
+                type="submit"
+                size="lg"
+                className="w-full font-mono bg-[#25D366] hover:bg-[#1da851] text-white cursor-pointer transition-colors duration-200"
+                disabled={submitting || sent}
+              >
+                <MessageCircle className="mr-2 h-4 w-4 text-white" />
                 {submitting ? 'Opening WhatsApp...' : sent ? 'Opened WhatsApp ✓' : 'Send via WhatsApp'}
               </Button>
               <p className="font-mono text-xs text-muted-foreground text-center">
-                Or email directly: <a href={`mailto:${developer.email}`} className="hover:text-accent transition-colors">{developer.email}</a>
+                Or email directly:{' '}
+                <a
+                  href={`mailto:${developer.email}`}
+                  title="Click to send email"
+                  className="hover:text-accent underline underline-offset-2 cursor-pointer transition-colors"
+                >
+                  {developer.email}
+                </a>
               </p>
             </div>
           </motion.form>
