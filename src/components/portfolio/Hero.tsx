@@ -98,7 +98,7 @@ export function Hero() {
                 <p><span className="text-accent">$</span> cat focus.txt</p>
                 <p className="text-white/80">wordpress · woocommerce · saas · ai-assisted dev</p>
                 <p><span className="text-accent">$</span> ls ai-stack/</p>
-                <p className="text-white/80">claude/ cursor/ chatgpt/ antigravity/ lovable/ qwen/ copilot/</p>
+                <p className="text-white/80">claude/ cursor/ chatgpt/ antigravity/ qwen/ copilot/</p>
                 <p><span className="text-accent">$</span> ls quality/</p>
                 <p className="text-white/80">clean-code/  unit-tests/  qa-automation/  code-review/</p>
                 <p className="terminal-cursor"><span className="text-accent">$</span> </p>

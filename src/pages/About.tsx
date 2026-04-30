@@ -84,7 +84,7 @@ export default function About() {
                 <div className="rounded-xl border border-border p-5">
                   <GraduationCap className="h-5 w-5 text-accent mb-3" />
                   <p className="font-mono text-xs text-muted-foreground">Education</p>
-                  <p className="font-medium text-sm">B.Eng SE — DIU</p>
+                  <p className="font-medium text-sm">BSc SE — DIU</p>
                 </div>
               </div>
 

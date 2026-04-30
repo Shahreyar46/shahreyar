@@ -11,7 +11,7 @@ export const developer: DeveloperInfo = {
     'Senior Software Engineer & Architect at WPPOOL. I build WordPress plugins and SaaS products serving 50,000+ active installs, engineered with OOP PHP, React/Vue, and an AI-assisted workflow that ships faster without sacrificing clean code or test coverage.',
   bio: `I'm a Dhaka-based Senior Software Engineer with 5+ years of experience architecting high-impact WordPress and WooCommerce products. As Architect & Planner at WPPOOL, I lead development on flagship products including WP Dark Mode (20,000+ active installs), ArchiveMaster, FlexMeeting (Jitsi) and EchoRewards.
 
-My work sits at the intersection of traditional CMS engineering and modern AI-assisted development. I lean on Claude, Cursor, ChatGPT, Antigravity, Lovable, Qwen and Copilot to move faster, while keeping a strong discipline around clean code, OOP architecture, automated test coverage and QA automation.
+My work sits at the intersection of traditional CMS engineering and modern AI-assisted development. I lean on Claude, Cursor, ChatGPT, Antigravity, Qwen and Copilot to move faster, while keeping a strong discipline around clean code, OOP architecture, automated test coverage and QA automation.
 
 I've contributed to plugins used by thousands of businesses globally, optimised databases for high-volume WooCommerce stores, and engineered seamless third-party integrations with Jitsi, Zoom, Google APIs and WhatsApp Business.`,
   philosophy:
@@ -22,7 +22,7 @@ I've contributed to plugins used by thousands of businesses globally, optimised 
   yearsOfExperience: 5,
   pluginsShipped: 10,
   productionUsers: '50K+',
-  cvUrl: '/Md-Al-Shahreyar-CV.pdf',
+  cvUrl: '/Md. Al-Shahreyar.pdf',
   social: {
     github: 'https://github.com/Shahreyar46',
     linkedin: 'https://linkedin.com/in/shahreyar46',
@@ -58,7 +58,7 @@ export const skillGroups: SkillGroup[] = [
     icon: 'Sparkles',
     items: [
       'Claude · Cursor · ChatGPT',
-      'Antigravity · Lovable · Qwen',
+      'Antigravity · Qwen',
       'GitHub Copilot · Agent workflows',
       'AI-driven feature scoping',
       'Prompt-engineered code review',
@@ -119,7 +119,6 @@ export const aiTools: AiTool[] = [
   { name: 'Cursor', use: 'In-IDE pair programming' },
   { name: 'ChatGPT', use: 'Spec drafting & debugging' },
   { name: 'Antigravity', use: 'Agent-driven workflows' },
-  { name: 'Lovable', use: 'Rapid product prototyping' },
   { name: 'Qwen', use: 'Code generation & analysis' },
   { name: 'GitHub Copilot', use: 'Inline completions' },
   { name: 'Gemini', use: 'Multimodal research' },
@@ -166,7 +165,7 @@ export const experience: Experience[] = [
       'Architected ArchiveMaster: WooCommerce DB optimiser with one-click local & Amazon RDS order archiving, slashing wp_posts bloat and improving query times for high-volume stores.',
       'Engineered FlexMeeting on the Jitsi Meet API with native webinar/video conferencing and deep WooCommerce, LMS and BuddyPress integration.',
       'Built EchoRewards referral & loyalty engine with automated coupon generation, social sharing (WhatsApp, X, Facebook) and ROI analytics dashboard, designed to lower customer acquisition cost.',
-      'Pioneered AI-assisted development workflows (Claude, Cursor, ChatGPT, Antigravity, Lovable) that measurably improved team velocity.',
+      'Pioneered AI-assisted development workflows (Claude, Cursor, ChatGPT, Antigravity) that measurably improved team velocity.',
       'Drove QA automation, code reviews and clean-code culture across the team.',
     ],
     stack: ['PHP (OOP)', 'React', 'Vue', 'WP REST API', 'WooCommerce', 'MySQL', 'Jitsi', 'AI Tooling'],
@@ -222,10 +221,10 @@ export const experience: Experience[] = [
 ];
 
 export const education = {
-  institution: 'Daffodil International University',
-  degree: 'B.Eng in Software Engineering',
+  institution: 'Daffodil International University-DIU',
+  degree: 'Software Engineering, BSc',
   faculty: 'Faculty of Information Technology',
-  period: '2015 — 2019',
+  period: '2015 – 2019',
   cgpa: '3.21',
 };
 
