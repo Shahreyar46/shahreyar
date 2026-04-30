@@ -46,7 +46,7 @@ const App = () => (
         <TooltipProvider>
           <Toaster />
           <Sonner />
-          <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+          <BrowserRouter basename="/shahreyar" future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
             <SkipToContent />
             <Layout>
               <Suspense fallback={<LoadingFallback />}>
